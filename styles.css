@@ -1,0 +1,281 @@
+:root{
+    --color-engrane:#f00;
+    --color-engrane-int:#0f0;
+    --color-nube:blue;
+    --diente-dim:0.5rem;
+    --diente-dim-int:0.2rem;
+    --radius-diente:calc(1.75*0.707);
+    --radius-diente-int:calc(0.75*0.707);
+}
+body{
+    background-image: url('https://cdn.pixabay.com/photo/2018/10/19/09/17/travel-3758193_960_720.jpg');
+    margin: 0;
+
+    /* background-color: aqua; */
+
+    color: white;
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* width: 100vw; */
+    font-size: 16px;
+
+}
+.boton{
+    padding: 0.5rem 2.5rem;
+    color: whitesmoke;
+    background-color: #00f;
+    font-size: large;
+}
+.boton:hover{
+    border: 2px white solid;
+}
+.caja{
+    display: flex;
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    align-items: center;
+}
+.modal{
+    background: none;
+    width: 10rem;
+    height: 10rem;
+    border: none;
+}
+.modal::backdrop{
+    background-image: linear-gradient(45deg,#f00,#00f);
+    opacity: 0.6;
+}
+.nube{
+    display: flex;
+    position: relative;
+    /* overflow: hidden; */    
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    /* transform: translateY(-5rem); */
+}
+
+.lob{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: var(--color-nube);
+    /* border: 2px solid red; */
+    
+}
+.base{
+    position: absolute;
+    /* transform: translate(50%,50%); */
+    width: 10rem;
+    /* border: 2px solid red; */
+    border-radius: 2.5rem 2.5rem;
+
+    /* transform: translateX(-.25rem); */
+}
+.l1{
+    position: absolute;
+    transform: translateY(-2.5rem);
+    /* background: linear-gradient(45deg,#fff,#fffa); */
+}
+.engrane{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    /* transform: translateX(-1.5rem); */
+    border-radius: 50%;
+    background-color: var(--color-engrane);
+    animation: rotar 5s infinite linear;
+    
+}
+@keyframes rotar {
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.engrane::before{
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color:var(--color-nube);
+}
+.D1{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform: translateY(-1.75rem);
+}
+.D2{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform:translateX(-1.75rem);
+}
+.D3{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform:translateX(1.75rem);
+}
+.D4{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform:translateY(1.75rem);
+}
+.D5{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform:translate(1.237rem,1.237rem) rotateZ(45deg);
+    
+}
+.D6{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform:translate(-1.237rem,-1.237rem) rotateZ(45deg);
+    
+}
+.D7{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform:translate(1.237rem,-1.237rem) rotateZ(45deg);
+    
+}
+.D8{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane);
+    transform:translate(-1.237rem,1.237rem) rotateZ(45deg);
+    
+}
+/*interior*/
+.engrane_int{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-engrane-int);
+    animation: rotar_int 4s infinite linear;
+}
+@keyframes rotar_int {
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+    
+}
+.engrane_int::before{
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color:var(--color-nube);
+}
+.Di1{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform: translateY(-1.1rem);
+}
+.Di2{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform:translateX(1.1rem);
+}
+.Di3{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform:translateX(-1.1rem);
+}
+.Di4{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform:translateY(1.1rem);
+}
+.Di5{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform:translate(0.777rem,0.777rem) rotateZ(45deg);
+    
+}
+.Di6{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform:translate(-0.777rem,-0.777rem) rotateZ(45deg);
+    
+}
+.Di7{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform:translate(0.777rem,-0.777rem) rotateZ(45deg);
+    
+}
+.Di8{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-engrane-int);
+    transform:translate(-0.777rem,0.777rem) rotateZ(45deg);
+    
+}
